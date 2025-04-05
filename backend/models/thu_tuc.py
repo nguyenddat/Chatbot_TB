@@ -5,7 +5,7 @@ from models.base import BareBaseModel
 class ThuTuc(BareBaseModel):
     __tablename__ = "thu_tuc"
 
-    ma_thu_tuc = Column(String(50), primary_key=True, index=True)
+    ma_thu_tuc = Column(String(50), index=True)
     ten_thu_tuc = Column(String, nullable=False)
     co_quan_thuc_hien = Column(String, nullable=False)
     linh_vuc_thuc_hien = Column(String, nullable=False)

@@ -24,7 +24,7 @@ def function_calling(question: str, db: Any):
         if int(thu_tuc_id) not in thu_tuc.thu_tucs:
             raise ValueError("Thủ tục không tồn tại")
         
-        thu_tuc_duoc_chon = thu_tuc.get_by_id(id = thu_tuc_id, db = db)
+        thu_tuc_duoc_chon = thu_tuc.get_by_id(id = thu_tuc_id)
         if not thu_tuc_duoc_chon:
             raise ValueError("Thủ tục không tồn tại")
         

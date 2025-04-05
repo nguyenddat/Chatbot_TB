@@ -1,0 +1,33 @@
+services:
+  db:
+    container_name: postgres_chatbot
+    image: postgres
+    env_file:
+      - ./.env
+    volumes:
+      - ./postgres_db:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+    restart: unless-stopped
+    networks:
+      - fast_api
+
+  app:
+    container_name: chatbot_backend
+    build:
+      context: ./backend
+    env_file:
+      - ./.env
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "9991:8000"
+    restart: unless-stopped
+    depends_on:
+      - db
+    networks:
+      - fast_api
+
+networks:
+  fast_api:
+    driver: bridge
