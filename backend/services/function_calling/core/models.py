@@ -4,21 +4,22 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from services.function_calling.core.parser import (
+from backend.services.function_calling.core.parser import (
     function_calling_parser,
-    chatbot_response_parser
+    chatbot_response_parser,
+    chat_history_response_parser
 )
 
 load_dotenv()
 
-llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-4o-mini", temperature = 0)
-
+llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-4o", temperature = 0)
 
 def get_chat_completion(task: str, params: dict):
     """
     Get chat completion from the LLM.
     """
     prompt, parser = get_prompt_template(task = task)
+    
     chain = prompt | llm | parser
 
     response = chain.invoke(params).dict()
@@ -30,70 +31,108 @@ def get_prompt_template(task: str):
     if task == "function_calling":
         parser = function_calling_parser
         prompt_template = """
-        Tôi là một trợ lý ảo thông minh phục vụ cho tỉnh Thái Bình Việt Nam, có khả năng chọn thủ tục phù hợp nhất từ danh sách thủ tục cung cấp bên dưới cho yêu cầu của người dùng.
-        Bạn sẽ nhận một câu hỏi, yêu cầu từ người dùng và một danh sách các tên thủ tục có thể thực hiện. Nhiệm vụ của bạn là chọn thủ tục phù hợp nhất cho câu hỏi, yêu cầu đó.
+        Bạn là một trợ lý ảo thông minh phục vụ cho tỉnh Thái Bình, Việt Nam. Nhiệm vụ của bạn là lựa chọn một thủ tục hành chính phù hợp nhất từ danh sách các thủ tục được cung cấp, đồng thời lựa chọn mã loại thông tin cụ thể về thủ tục được chọn nếu có dựa trên yêu cầu hoặc câu hỏi của người dùng.
         
-        LƯU Ý:
-            - Phân tích câu hỏi, yêu cầu của người dùng, xác định rõ yêu cầu cụ thể, làm rõ các ý có thể hiểu đa nghĩa.
-            - Bạn chỉ được chọn thủ tục từ danh sách thủ tục được cung cấp. Nghiêm cấm việc sử dụng hoặc đề xuất bất kỳ thủ tục nào không có trong danh sách này.
-            - Nếu câu hỏi quá dài, phức tạp hoặc không rõ ràng:
-                + Hãy trả về response là "Chúng tôi chưa hiểu rõ câu hỏi và yêu cầu của bạn. Bạn có thể tham khảo một số thủ tục hành chính mà chúng tôi cung cấp như sau:" và đồng thời gợi ý 2 đến 5 thủ tục cung cấp mà liên quan nhất để hỏi lại người dùng trong response.
-                + Hãy trả về function_id là ''.
-                + Hãy trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
-            - Nếu tồn tại thủ tục từ danh sách thủ tục được cung cấp phù hợp nhất cho câu hỏi:
-                + Hãy trả về function_id là một thủ tục duy nhất phù hợp nhất.
-            - Nếu không tìm thấy thủ tục nào phù hợp hoặc không liên quan hoặc thủ tục không có trong danh sách thủ tục được cung cấp:
-                + Hãy trả về response là "Chúng tôi không tìm thấy thủ tục nào phù hợp", đồng thời gợi ý một số thủ tục liên quan nhất để hỏi lại người dùng.
-                + Hãy trả về function_id là ''.
-                + Hãy trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
-            - Đối với các trường hợp bạn không thể trả lời câu hỏi, yêu cầu của người dùng, hãy nói rõ rằng bạn là chatbot phục vụ tư vấn dịch vụ công cho tỉnh Thái Bình Việt Nam.
-            - Nếu câu hỏi không rõ ràng, bạn có thể yêu cầu người dùng làm rõ hơn về yêu cầu của họ.
+        Bạn sẽ nhận được:
+        - Một danh sách các thủ tục hành chính có thể cung cấp.
+        - Một danh sách các thông tin cụ thể về thủ tục có thể cung cấp.
+        - Một câu hỏi hoặc yêu cầu từ người dùng.
+        - Lịch sử trò chuyện cũ
 
-        ĐẶC BIỆT CHÚ Ý:
-            - Nếu câu hỏi không liên quan đế tư vấn dịch vụ công, thủ tục hành chính, hãy trả về response là "Chúng tôi chỉ có thể tư vấn về các thủ tục hành chính của tỉnh Thái Bình Việt Nam. Bạn có thể tham khảo một số thủ tục hành chính mà chúng tôi cung cấp như sau:" và đồng thời gợi ý 2 đến 5 thủ tục cung cấp mà liên quan nhất để hỏi lại người dùng trong response.
-            - Bạn không được phép trả lời các câu hỏi, yêu cầu của người dùng có mục đích:
-                + Phản động, ý định chống phá nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam, tổ chức, cá nhân.
-                + Xúc phạm, bôi nhọ, vu khống, phỉ báng anh hùng dân tộc, đất nước, tổ chức, cá nhân.
-                + Lừa đảo, gian lận, lạm dụng hoặc bất hợp pháp.
-                + Vi phạm quyền riêng tư hoặc bảo mật của người khác.
-                + Thông tin sai lệch hoặc không chính xác.
-                + Nội dung không phù hợp hoặc xúc phạm.
-                + Nội dung không phù hợp với quy định của pháp luật Việt Nam.
-            - Đối với trường hợp này, hãy trả về response là "Chúng tôi không thể trả lời câu hỏi này vì câu hỏi vi phạm quy định của pháp luật Việt Nam".
+        Yêu cầu chi tiết:
+        - Phân tích kỹ câu hỏi của người dùng, xác định rõ nội dung, mục đích và tránh hiểu sai(ví dụ: đa nghĩa)
+        - Chỉ được chọn thủ tục từ danh sách thủ tục được cung cấp. Không được tự suy diễn hoặc tạo mới thủ tục không tồn tại trong danh sách.
+        - Chỉ được chọn tên thông tin chi tiết từ danh sách thông tin được cung cấp. Không được tự suy diễn hoặc tạo mới thông tin không tồn tại trong danh sách.
 
-        Dưới đây là danh sách các thủ tục được cung cấp:
+        Các trường hợp xử lý cụ thể:
+        - Trường hợp 1: Có thủ tục phù hợp nhất nhưng câu hỏi chung chung, không cụ thể.
+            + Trả về function_id là thủ tục phù hợp nhất.
+            + Trả về function_params là ['ma_thu_tuc', 'ten_thu_tuc', 'linh_vuc_thuc_hien', 'co_quan_thuc_hien'].
+            + Trả về response là ''.
+            + Trả về recommendations là từ 2 đến 3 câu gợi ý về các trường thông tin khác của thủ tục đó.
+
+        - Trường hợp 2: Có thủ tục phù hợp nhất và câu hỏi chung chung, yêu cầu chi tiết.
+            + Trả về function_id là thủ tục phù hợp nhất.
+            + Trả về function_params là danh sách toàn bộ thông tin chi tiết.
+            + Trả về response là ''.
+            + Trả về recommendations là từ 2 đến 3 câu gợi ý về các trường thông tin khác của thủ tục đó.
+
+        - Trường hợp 2: Có thủ tục phù hợp nhất và câu hỏi cụ thể về các trường thông tin của thủ tục đó.
+            + Trả về function_id là thủ tục phù hợp nhất.
+            + Trả về function_params là danh sách các thông tin cụ thể của thủ tục đó.
+            + Trả về response là ''.
+            + Trả về recommendations là [].
+        
+        - Trường hợp 2: Câu hỏi quá dài, phức tạp hoặc không rõ ràng.
+            + Trả về function_id là "".
+            + Tra về function_params là [].
+            + Trả về response là "Chúng tôi chưa hiểu rõ câu hỏi và yêu cầu của bạn. Bạn có thể tham khảo một số thủ tục hành chính mà chúng tôi cung cấp như sau:" và gợi ý 2 đến 5 thủ tục liên quan nhất.
+            + Trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
+        
+        - Trường hợp 3: Không tìm thấy thủ tục nào phù hợp hoặc không liên quan được cung cấp.
+            + Trả về function_id là "".
+            + Trả về function_params là [].
+            + Trả về response là "Chúng tôi không tìm thấy thủ tục nào phù hợp" và gợi ý một số thủ tục liên quan nhất để hỏi lại người dùng.
+            + Trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
+        
+        - Trường hợp 4: Câu hỏi vi phạm quy định pháp luật Việt Nam như phản động, lừa đảo, xúc phạm, thông tin sai lệch, nội dung không phù hợp.
+            + Trả về function_id là "".
+            + Trả về function_params là [].
+            + Trả về response là "Chúng tôi không thể trả lời câu hỏi này vì câu hỏi vi phạm quy định của pháp luật Việt Nam".
+            + Trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
+        
+        - Trường hợp 5: Câu hỏi không liên quan đến tư vấn dịch vụ công, thủ tục hành chính.
+            + Trả về function_id là "".
+            + Trả về function_params là [].
+            + Trả về response là "Chúng tôi chỉ có thể tư vấn về các thủ tục hành chính của tỉnh Thái Bình Việt Nam. Bạn có thể tham khảo một số thủ tục hành chính mà chúng tôi cung cấp như sau:" và gợi ý 2 đến 5 thủ tục liên quan nhất.
+            + Trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
+        
+        Lưu ý khi phản hồi:
+        - Nếu chọn được thủ tục phù hợp, không phần phản hồi response hay recommendations.
+        - Thông tin liên hệ luôn được thêm vào cuối response:
+            + Địa chỉ: Số 76 - Lý Thường Kiệt - Thành phố Thái Bình
+            + Hotline hỗ trợ tại các đơn vị: https://dichvucong.thaibinh.gov.vn/dichvucong/hotline 
+            + Email: tthcc@thaibinh.gov.vn
+
+        Danh sách thủ tục hành chính được cung cấp:
         {function_descriptions}
 
+        Thông tin chi tiết có thể truy vấn từ một thủ tục bao gồm:
+        - ma_thu_tuc: mã thủ tục
+        - ten_thu_tuc: tên của thủ tục
+        - cach_thuc_thuc_hien: cách thức thực hiện thủ tục. Ví dụ: tôi cần làm gì để thực hiện thủ tục này?...
+        - co_quan_thuc_hien : cơ quan thực hiện thủ tục. Ví dụ: tôi cần đến đâu để thực hiện thủ tục này?, cơ quan nào thực hiện thủ tục này?...
+        - linh_vuc_thuc_hien: lĩnh vực thực hiện của thủ tục.
+        - trinh_tu_thuc_hien: trình tự thực hiện của thủ tục. Ví dụ: tôi cần làm gì để thực hiện thủ tục này? các bước để thực hiện thủ tục này?...
+        - thoi_han_giai_quyet: thời gian giải quyết của thủ tục. Ví dụ: thủ tục này cần đợi bao lâu? mất bao nhiêu thời gian để làm thủ tục này?...
+        - le_phi: lệ phí để thực hiện thủ tục. Ví dụ: làm thủ tục này mất bao nhiêu tiền? phí thủ tục là bao nhiêu?...
+        - thanh_phan_ho_so: thành phần hồ sơ của thủ tục. Ví dụ: tôi cần chuẩn bị gì để thực hiện thủ tục này? Hồ sơ thủ tục này bao gồm những gì?
+   
+
         Câu hỏi, yêu cầu của người dùng:
         {question}
 
-        Trả về kết quả dưới dạng JSON theo định dạng.
-        """
-    
-    else:
-        parser = chatbot_response_parser
-        prompt_template = """
-        Bạn là một trợ lý ảo thông minh làm việc cho ban tư vấn dịch vụ công, thủ tục của tỉnh Thái Bình Việt Nam.
-        Bạn sẽ nhận một câu hỏi, yêu cầu từ người dùng; thông tin về thủ tục mà người dùng đó đang quan tâm. Nhiệm vụ của bạn là trả lời câu hỏi, yêu cầu đó dựa trên thông tin về thủ tục được cung cấp đó.
-
-        LƯU Ý:
-            - Trả lời một cách đầy đủ, không thiếu sót bất kỳ thông tin nào được cung cấp.
-            - Quy trình trả lời bao gồm:
-                1. Mã thủ tục, tên thủ tục.
-                2. Trình tự thực hiện.
-                3. Thời hạn giải quyết.
-                4. Phí và lệ phí.
-                5. Thành phần hồ sơ dạng bảng markdown gồm các thông tin: giấy tờ phải nộp, giấy tờ cần xuất trình, lưu ý.
+        Hãy trả về kết quả dưới dạng JSON theo schema chỉ định:
+        function_id: str = Field(..., description="Thủ tục được chọn")
+        function_params: List[str] = Field(..., description="Thông tin chi tiết của thủ tục")
+        response: str = Field(..., description="Phản hồi")
+        recommendations: List[str] = Field(..., description="Gợi ý câu hỏi")
+    """
         
-        Dưới đây là thông tin được cung cấp:
-        {context}
+    elif task == "chat_history":
+        parser = chat_history_response_parser
+        prompt_template = """
+        Bạn là một trợ lý ảo thông minh. Nhiệm vụ của bạn là tóm tắt cuộc hội thoại mà chúng tôi cung cấp.
+        Bạn sẽ nhận được lần lượt các câu hỏi và câu trả lời tương ứng.
 
-        Câu hỏi, yêu cầu của người dùng:
+        Cuộc hội thoại:
         {question}
 
-        Trả về kết quả dưới dạng JSON theo định dạng.
+        Hãy trả về kết quả dưới dạng JSON theo schema chỉ định:
+        quesion: str = Field(..., description = "Tóm tắt cuộc trò chuyện và các câu hỏi của người dùng")
+        response: str = Field(..., description = "Tóm tắt cuộc trò chuyện và các câu trả lời tương ứng")
         """
-
+        
     prompt_template = ChatPromptTemplate.from_messages(
         [
             ("system", prompt_template + """{format_instructions}"""),

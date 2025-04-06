@@ -1,2 +1,2 @@
-from models.base import BareBaseModel
-from models.thu_tuc import ThuTuc
+from backend.models.base import BareBaseModel
+from backend.models.thu_tuc import ThuTuc

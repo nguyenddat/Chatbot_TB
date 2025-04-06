@@ -4,9 +4,9 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database.base import engine
-from models.base import Base
-from api import (
+from backend.database.base import engine
+from backend.models.base import Base
+from backend.api import (
     chatbot
 )
 
@@ -14,7 +14,6 @@ Base.metadata.create_all(bind=engine)
 
 def get_application() -> FastAPI:
     application = FastAPI()
-    
     application.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
