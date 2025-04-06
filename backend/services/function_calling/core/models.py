@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from backend.services.function_calling.core.parser import (
+from services.function_calling.core.parser import (
     function_calling_parser,
     chatbot_response_parser,
     chat_history_response_parser
@@ -108,9 +108,11 @@ def get_prompt_template(task: str):
         - le_phi: lệ phí để thực hiện thủ tục. Ví dụ: làm thủ tục này mất bao nhiêu tiền? phí thủ tục là bao nhiêu?...
         - thanh_phan_ho_so: thành phần hồ sơ của thủ tục. Ví dụ: tôi cần chuẩn bị gì để thực hiện thủ tục này? Hồ sơ thủ tục này bao gồm những gì?
    
-
         Câu hỏi, yêu cầu của người dùng:
         {question}
+
+        Lịch sử trò chuyện:
+        {chat_history}
 
         Hãy trả về kết quả dưới dạng JSON theo schema chỉ định:
         function_id: str = Field(..., description="Thủ tục được chọn")

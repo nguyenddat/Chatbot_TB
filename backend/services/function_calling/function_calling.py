@@ -1,9 +1,9 @@
 from typing import *
 
-from backend.services.function_calling.functions import (
+from services.function_calling.functions import (
     thu_tuc
 )
-from backend.services.function_calling.core import (
+from services.function_calling.core import (
     models,
     chat_history
 )
@@ -20,7 +20,7 @@ def function_calling(question: str, db: Any):
         params = {
             "question": question, 
             "function_descriptions": function_descriptions,
-            # "chat_history": chat_history.chat_history_mananger.to_string()
+            "chat_history": chat_history.chat_history_mananger.to_string()
         }
     )
 

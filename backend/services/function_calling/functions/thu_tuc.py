@@ -1,6 +1,6 @@
 import sqlite3
-from backend.database.base import get_db
-from backend.models.thu_tuc import ThuTuc
+from database.base import get_db
+from models.thu_tuc import ThuTuc
 
 DB_PATH = "chatbot.db"
 atrs = {
