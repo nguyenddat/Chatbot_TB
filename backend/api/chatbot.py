@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 
-from backend.database.base import get_db
-from backend.schemas import chatbot
-from backend.services.function_calling import function_calling
-from backend.services.function_calling.core import chat_history
+from database.base import get_db
+from schemas import chatbot
+from services.function_calling import function_calling
+from services.function_calling.helpers import chat_history
 
 router = APIRouter()
 
@@ -15,13 +15,18 @@ def chat_chatbot(data: chatbot.ChatChatbotRequest, db=Depends(get_db)):
     chat_history_format = chat_history.chat_history_mananger._format_chat_history(
         chat_history_request
     )
-    response = function_calling.function_calling(question=question, db=db)
-    # chat_history.chat_history_mananger.add_chat(
-    #     question=question, response=str(response)
-    # )
+
+    agent = function_calling.function_calling(
+        question=question, 
+        chat_history = chat_history_format,
+    )
+
+    response = agent.get_response(question=question, chat_history=chat_history_format)
+
     chat_history.chat_history_mananger.add_chat_format(
         question=question, chat_history_format=chat_history_format
     )
+
     return {
         "result": "successfully",
         "status": 200,

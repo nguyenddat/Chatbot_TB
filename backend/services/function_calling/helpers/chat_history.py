@@ -1,7 +1,7 @@
 from langchain.schema import HumanMessage, AIMessage
 from typing import List, Dict
 
-from backend.services.function_calling.core.models import get_chat_completion
+from services.function_calling.core.models import get_chat_completion
 
 
 class ChatHistoryManager:
@@ -18,7 +18,7 @@ class ChatHistoryManager:
         if len(self.chat_history) > 6:
             self.summarize_history()
 
-    def add_chat_format(self, question, chat_history_format):
+    def add_chat_format(self, chat_history_format):
         self.chat_history = chat_history_format
 
         if len(self.chat_history) > 6:

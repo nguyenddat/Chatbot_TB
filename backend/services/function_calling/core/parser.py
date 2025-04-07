@@ -1,9 +1,11 @@
 from langchain_core.output_parsers import PydanticOutputParser
 
-from backend.services.function_calling.schemas import (
+from services.function_calling.schemas import (
     function_calling,
     chatbot_response,
-    chat_history_response
+    chat_history_response,
+    procedure_response,
+    welcome_response
 )
 
 function_calling_parser = PydanticOutputParser(
@@ -16,4 +18,12 @@ chatbot_response_parser = PydanticOutputParser(
 
 chat_history_response_parser = PydanticOutputParser(
     pydantic_object=chat_history_response.ChatHistoryResponse
+)
+
+welcome_parser = PydanticOutputParser(
+    pydantic_object=welcome_response.WelcomeAgentResponse
+)
+
+procedure_parser = PydanticOutputParser(
+    pydantic_object=procedure_response.ProcedureAgentResponse
 )

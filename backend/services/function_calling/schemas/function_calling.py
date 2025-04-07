@@ -6,7 +6,4 @@ class FunctionCallingResponse(BaseModel):
     """
     Function calling response schema.
     """
-    function_id: str = Field(..., description="Name of the function to call")
-    function_params: List[str] = Field(..., description="Parameters for the function call")
-    response: str = Field(..., description="Response from the function call")
-    recommendations: List[str] = Field(..., description="List of recommended functions")
+    agent_id: str = Field(..., description="Tên agent được chọn")
