@@ -4,22 +4,25 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from services.function_calling.core.parser import (
+from backend.services.function_calling.core.parser import (
     function_calling_parser,
     chatbot_response_parser,
-    chat_history_response_parser
+    chat_history_response_parser,
 )
 
 load_dotenv()
 
-llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-4o", temperature = 0)
+llm = ChatOpenAI(
+    openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-4o", temperature=0
+)
+
 
 def get_chat_completion(task: str, params: dict):
     """
     Get chat completion from the LLM.
     """
-    prompt, parser = get_prompt_template(task = task)
-    
+    prompt, parser = get_prompt_template(task=task)
+
     chain = prompt | llm | parser
 
     response = chain.invoke(params).dict()
@@ -88,6 +91,7 @@ def get_prompt_template(task: str):
             + Trả về recommendations là từ 2 đến 3 câu hỏi gợi ý các thủ tục cung cấp mà liên quan nhất đến người dùng.
         
         Lưu ý khi phản hồi:
+        - recommendations là danh sách các câu hỏi gợi ý mà người dùng có thể hỏi tiếp theo, sử dụng giọng hỏi là người dùng.
         - Nếu chọn được thủ tục phù hợp, không phần phản hồi response hay recommendations.
         - Thông tin liên hệ luôn được thêm vào cuối response:
             + Địa chỉ: Số 76 - Lý Thường Kiệt - Thành phố Thái Bình
@@ -120,7 +124,7 @@ def get_prompt_template(task: str):
         response: str = Field(..., description="Phản hồi")
         recommendations: List[str] = Field(..., description="Gợi ý câu hỏi")
     """
-        
+
     elif task == "chat_history":
         parser = chat_history_response_parser
         prompt_template = """
@@ -134,11 +138,11 @@ def get_prompt_template(task: str):
         quesion: str = Field(..., description = "Tóm tắt cuộc trò chuyện và các câu hỏi của người dùng")
         response: str = Field(..., description = "Tóm tắt cuộc trò chuyện và các câu trả lời tương ứng")
         """
-        
+
     prompt_template = ChatPromptTemplate.from_messages(
         [
             ("system", prompt_template + """{format_instructions}"""),
-            ("human", "{question}")
+            ("human", "{question}"),
         ]
     ).partial(format_instructions=parser.get_format_instructions())
 

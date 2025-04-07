@@ -1,9 +1,9 @@
 from typing import *
 
-from services.function_calling.functions import (
+from backend.services.function_calling.functions import (
     thu_tuc
 )
-from services.function_calling.core import (
+from backend.services.function_calling.core import (
     models,
     chat_history
 )

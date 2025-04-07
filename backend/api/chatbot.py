@@ -1,24 +1,27 @@
 from fastapi import APIRouter, Depends
 
-from database.base import get_db
-from schemas import (
-    chatbot
-)
-from services.function_calling import function_calling
-from services.function_calling.core import chat_history
+from backend.database.base import get_db
+from backend.schemas import chatbot
+from backend.services.function_calling import function_calling
+from backend.services.function_calling.core import chat_history
 
 router = APIRouter()
 
+
 @router.post("/chatbot")
-def chat_chatbot(data: chatbot.ChatChatbotRequest, db = Depends(get_db)):
+def chat_chatbot(data: chatbot.ChatChatbotRequest, db=Depends(get_db)):
     question = data.question
-
-    response = function_calling.function_calling(question = question, db = db)
-    chat_history.chat_history_mananger.add_chat(
-        question = question,
-        response = str(response)
+    chat_history_request = data.chat_history
+    chat_history_format = chat_history.chat_history_mananger._format_chat_history(
+        chat_history_request
     )
-
+    response = function_calling.function_calling(question=question, db=db)
+    # chat_history.chat_history_mananger.add_chat(
+    #     question=question, response=str(response)
+    # )
+    chat_history.chat_history_mananger.add_chat_format(
+        question=question, chat_history_format=chat_history_format
+    )
     return {
         "result": "successfully",
         "status": 200,
@@ -30,6 +33,6 @@ def chat_chatbot(data: chatbot.ChatChatbotRequest, db = Depends(get_db)):
                     "content": response["response"],
                     "recommendations": response["recommendations"],
                 }
-            ]
-        }
+            ],
+        },
     }

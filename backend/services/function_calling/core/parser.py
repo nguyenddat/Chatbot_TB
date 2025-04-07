@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import PydanticOutputParser
 
-from services.function_calling.schemas import (
+from backend.services.function_calling.schemas import (
     function_calling,
     chatbot_response,
     chat_history_response
