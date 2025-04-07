@@ -1,10 +1,10 @@
-from services.function_calling.core.prompts import procedure_agent_prompt
-from services.function_calling.core.models import get_chat_completion
-from services.function_calling.agents.procedure_agent.helpers import thu_tuc
+from backend.services.function_calling.core.prompts import procedure_agent_prompt
+from backend.services.function_calling.core.models import get_chat_completion
+from backend.services.function_calling.agents.procedure_agent.helpers import thu_tuc
 
 class ProcedureAgent:
     def __init__(self):
-        self.description = "Đây là agent được chuyên dụng đối với nhiệm vụ hỏi đáp về một thủ tục cụ thể. Nếu người dùng cần hỏi về một thủ tục nào đó cụ thể, agent nên được ưu tiên"
+        self.description = "Đây là agent được chuyên dụng đối với nhiệm vụ hỏi đáp về một thủ tục cụ thể. Nếu người dùng cần hỏi về thủ tục cụ thể nào đó, agent nên được ưu tiên. Nếu người dùng hỏi chung chung như tôi phù hợp với thủ tục nào, không nên sử dụng agent này."
 
         self.propmt = procedure_agent_prompt
 
@@ -13,7 +13,7 @@ class ProcedureAgent:
         response = get_chat_completion(
             task = "procedure",
             params = {
-                "function_descriptions": thu_tuc.procedure_descriptions,
+                "procedure_descriptions": thu_tuc.procedure_descriptions,
                 "question": question,
                 "chat_history": chat_history
             }

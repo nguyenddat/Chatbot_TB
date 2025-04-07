@@ -1,8 +1,8 @@
 from typing import *
 
-from services.function_calling.agents.agent import agents, agent_descriptions
-from services.function_calling.core.models import get_chat_completion
-from services.function_calling.helpers.chat_history import chat_history_mananger
+from backend.services.function_calling.agents.agent import agents, agent_descriptions
+from backend.services.function_calling.core.models import get_chat_completion
+from backend.services.function_calling.helpers.chat_history import chat_history_mananger
 
 def function_calling(question: str, chat_history: Any, db: Any = None):
     response = get_chat_completion(

@@ -4,14 +4,14 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from services.function_calling.core.parser import (
+from backend.services.function_calling.core.parser import (
     function_calling_parser,
     chat_history_response_parser,
     welcome_parser,
     procedure_parser
 )
 
-from services.function_calling.core.prompts import *
+from backend.services.function_calling.core.prompts import *
 
 load_dotenv()
 

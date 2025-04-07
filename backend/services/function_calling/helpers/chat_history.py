@@ -1,7 +1,7 @@
 from langchain.schema import HumanMessage, AIMessage
 from typing import List, Dict
 
-from services.function_calling.core.models import get_chat_completion
+from backend.services.function_calling.core.models import get_chat_completion
 
 
 class ChatHistoryManager:

@@ -1,5 +1,5 @@
-from services.function_calling.agents.procedure_agent import procedure_agent
-from services.function_calling.agents.welcome_agent import welcome_agent
+from backend.services.function_calling.agents.procedure_agent import procedure_agent
+from backend.services.function_calling.agents.welcome_agent import welcome_agent
 
 
 agents = {

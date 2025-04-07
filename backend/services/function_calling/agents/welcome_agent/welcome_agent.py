@@ -1,10 +1,10 @@
-from services.function_calling.core.prompts import welcome_agent_prompt
-from services.function_calling.core.models import get_chat_completion
-from services.function_calling.agents.procedure_agent.helpers import thu_tuc
+from backend.services.function_calling.core.prompts import welcome_agent_prompt
+from backend.services.function_calling.core.models import get_chat_completion
+from backend.services.function_calling.agents.procedure_agent.helpers import thu_tuc
 
 class WelcomeAgent:
     def __init__(self):
-        self.description = "Đây là agent được chuyên dụng đối với nhiệm vụ chào hỏi, giới thiệu về tính năng chức năng của hệ thống. Nếu câu hỏi, yêu cầu của người hỏi mang tính chào hỏi, xã giao hoặc yêu cầu  chung chung không cụ thể thủ tục cần thiết thì đây là agent nên được ưu tiên."
+        self.description = "Đây là agent được chuyên dụng đối với nhiệm vụ chào hỏi, giới thiệu về tính năng chức năng của hệ thống và tư vấn tủ tục phù hợp với người dùng. Nếu câu hỏi, yêu cầu của người hỏi mang tính chào hỏi, xã giao thì đây là agent nên được ưu tiên. Hơn nữa, nếu người dùng hỏi về thủ tục nào phù hợp với bản thân hoặc đại khái là mang tính chất tư vấn và giới thiệu, agent này nên được ưu tiên. Nếu người dùng hỏi về đặc biệt 1 thủ tục cụ thể, không nên sử dụng agent này."
 
         self.promp = welcome_agent_prompt
     
