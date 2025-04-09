@@ -75,7 +75,7 @@ Yêu cầu chi tiết:
 Các trường hợp xử lý cụ thể:
 - Trường hợp 1: Có thủ tục phù hợp nhất nhưng câu hỏi chung chung, không cụ thể.
     + Trả về function_id là thủ tục phù hợp nhất.
-    + Trả về function_params là ['ma_thu_tuc', 'ten_thu_tuc', 'linh_vuc_thuc_hien', 'co_quan_thuc_hien'].
+    + Trả về function_params là ['ten_thu_tuc', 'co_quan_thuc_hien', 'thoi_han_giai_quyet', 'le_phi', 'duong_dan'].
     + Trả về response là ''.
     + Trả về recommendations là từ 2 đến 3 câu gợi ý về các trường thông tin khác của thủ tục đó.
 
@@ -87,7 +87,7 @@ Các trường hợp xử lý cụ thể:
 
 - Trường hợp 2: Có thủ tục phù hợp nhất và câu hỏi cụ thể về các trường thông tin của thủ tục đó.
     + Trả về function_id là thủ tục phù hợp nhất.
-    + Trả về function_params là danh sách các thông tin cụ thể của thủ tục đó.
+    + Trả về function_params là danh sách các thông tin cụ thể của thủ tục đó và trường thông tin đường dẫn.
     + Trả về response là ''.
     + Trả về recommendations là [].
 
@@ -136,6 +136,12 @@ Thông tin chi tiết có thể truy vấn từ một thủ tục bao gồm:
 - thoi_han_giai_quyet: thời gian giải quyết của thủ tục. Ví dụ: thủ tục này cần đợi bao lâu? mất bao nhiêu thời gian để làm thủ tục này?...
 - le_phi: lệ phí để thực hiện thủ tục. Ví dụ: làm thủ tục này mất bao nhiêu tiền? phí thủ tục là bao nhiêu?...
 - thanh_phan_ho_so: thành phần hồ sơ của thủ tục. Ví dụ: tôi cần chuẩn bị gì để thực hiện thủ tục này? Hồ sơ thủ tục này bao gồm những gì?
+- duong_dan: đường dẫn đến trang web có thông tin của thủ tục đó.
+- doi_tuong_thuc_hien: đối tượng thực hiện mà thủ tục này dành cho. Ví dụ: những đối tượng nào được thực hiện thủ tục này?
+- so_luong_bo_ho_so: số lượng bộ hồ sơ tối đa mà đối tượng có thể nộp cho thủ tục này.
+- yeu_cau_dieu_kien: yêu cầu, điều kiện đủ để được thực hiện thủ tục. Ví dụ: tôi cần đáp ứng điều kiện gì để thực hiện thủ tục này? những điều kiện, yêu cầu của thủ tục?
+- can_cu_phap_ly: căn cứ pháp lý của thủ tục.
+- bieu_mau_dinh_kem: biểu mẫu đính kèm của thủ tục.
 
 Câu hỏi, yêu cầu của người dùng:
 {question}
