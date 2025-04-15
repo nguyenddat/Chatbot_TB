@@ -14,7 +14,13 @@ atrs = {
     "thoi_han_giai_quyet": "Thời hạn giải quyết của thủ tục",
     "le_phi": "Lệ phí của thủ tục",
     "thanh_phan_ho_so": "Thành phần hồ sơ của thủ tục",
-    "thoi_han_xu_ly": "Thời hạn xử lý của thủ tục"
+    "thoi_han_xu_ly": "Thời hạn xử lý của thủ tục",
+    "duong_dan": "Đường dẫn đến trang thông tin của thủ tục",
+    "doi_tuong_thuc_hien": "Đối tượng thực hiện của thủ tục",
+    "so_luong_bo_ho_so": "Số lượng bộ hồ sơ của thủ tục",
+    "yeu_cau_dieu_kien": "Yêu cầu/ Điều kiện của thủ tục",
+    "can_cu_phap_ly": "Căn cứ pháp lý của thủ tục",
+    "bieu_mau_dinh_kem": "Biểu mẫu đính kèm của thủ tục"
 }
 
 def get_connection():
@@ -45,7 +51,7 @@ def get_by_id(id: int, params = []):
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     
-    always_fields = ["ma_thu_tuc", "ten_thu_tuc", "co_quan_thuc_hien", "linh_vuc_thuc_hien"]
+    always_fields = ["ten_thu_tuc", "co_quan_thuc_hien", "linh_vuc_thuc_hien"]
     if not params:
         query = "SELECT * FROM thu_tuc WHERE rowid = ?"
         cursor.execute(query, (id,))
@@ -77,15 +83,20 @@ def to_string(thu_tuc_row):
 
     params_info = ""
     for key, value in dict(thu_tuc_row)["params"].items():
-        if key == "id" or value == "":
+        if key in {"id", "duong_dan"}:
             continue
         
         if key in atrs:
-            params_info += f"\n\n**{atrs[key]}**:\n{value}"
+            if value == "":
+                params_info += f"\n\n**{atrs[key]}**:\nKhông có thông tin về {atrs[key]}"
+            else:
+                params_info += f"\n\n**{atrs[key]}**:\n{value}"
 
     if params_info:
         text += "\n\n**Thông tin bạn cần tìm kiếm như sau:**" + params_info
 
+    text += f"\n##### Cần thêm thông tin:"
+    text += f" [Xem thêm]({dict(thu_tuc_row)['params']['duong_dan']})"
     return text
 
 thu_tucs = get()

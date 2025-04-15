@@ -17,8 +17,8 @@ def chat_chatbot(data: chatbot.ChatChatbotRequest, db=Depends(get_db)):
     )
 
     agent = function_calling.function_calling(
-        question=question, 
-        chat_history = chat_history_format,
+        question=question,
+        chat_history=chat_history_format,
     )
 
     response = agent.get_response(question=question, chat_history=chat_history_format)
