@@ -4,14 +4,19 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from backend.services.function_calling.core.parser import (
+from backend.services.chatbot_agents.llm_clients.parsers import (
     function_calling_parser,
     chat_history_response_parser,
     welcome_parser,
     procedure_parser
 )
 
-from backend.services.function_calling.core.prompts import *
+from backend.services.chatbot_agents.llm_clients.prompts import (
+    agent_selector,
+    chat_history,
+    procedure_selector,
+    welcome_agent
+)
 
 load_dotenv()
 
@@ -36,19 +41,19 @@ def get_chat_completion(task: str, params: dict):
 def get_prompt_template(task: str):
     if task == "function_calling":
         parser = function_calling_parser
-        prompt_template = function_calling_prompt
+        prompt_template = agent_selector.agent_selector_prompt
     
     elif task == "welcome":
         parser = welcome_parser
-        prompt_template = welcome_agent_prompt
+        prompt_template = welcome_agent.welcome_agent_prompt
     
     elif task == "procedure":
         parser = procedure_parser
-        prompt_template = procedure_agent_prompt
+        prompt_template = procedure_selector.procedure_selector_prompt
     
     elif task == "chat_history":
         parser = chat_history_response_parser
-        prompt_template = chat_history_prompt
+        prompt_template = chat_history.chat_history_prompt
     
     prompt_template = ChatPromptTemplate.from_messages(
         [

@@ -1,6 +1,6 @@
-from backend.services.function_calling.core.prompts import welcome_agent_prompt
-from backend.services.function_calling.core.models import get_chat_completion
-from backend.services.function_calling.agents.procedure_agent.helpers import thu_tuc
+from backend.services.chatbot_agents.core.prompts import welcome_agent_prompt
+from backend.services.chatbot_agents.core.models import get_chat_completion
+from backend.services.chatbot_agents.agents.procedure_agent.helpers import thu_tuc
 
 class WelcomeAgent:
     def __init__(self):
