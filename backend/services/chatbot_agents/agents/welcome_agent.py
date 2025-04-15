@@ -1,6 +1,6 @@
-from services.chatbot_agents.llm_clients.prompts import welcome_agent
-from services.chatbot_agents.llm_clients.clients import get_chat_completion
-from services.chatbot_agents.helpers.procedures import get_random_thu_tuc
+from backend.services.chatbot_agents.llm_clients.prompts import welcome_agent
+from backend.services.chatbot_agents.llm_clients.clients import get_chat_completion
+from backend.services.chatbot_agents.helpers.procedures import get_random_thu_tuc
 
 class WelcomeAgent:
     def __init__(self):
@@ -10,7 +10,7 @@ class WelcomeAgent:
     
 
     def get_response(self, question, chat_history):
-        response = get_chat_completion(
+        response, tokens = get_chat_completion(
             task = "welcome",
             params = {
                 "procedure_descriptions": get_random_thu_tuc(),
@@ -19,7 +19,7 @@ class WelcomeAgent:
             }
         )
 
-        return response
+        return response, tokens
 
 welcome_agent = WelcomeAgent()
 

@@ -1,3 +1,0 @@
-Cấp lại Giấy chứng nhận đăng ký phương tiện thủy nội địa cho phương tiện thay đổi tên, tính năng kỹ thuật.
-
-- 9951: Đây là thủ tục Cấp lại Giấy chứng nhận đăng ký phương tiện thủy nội địa cho phương tiện thay đổi tên, tính năng kỹ thuật. thuộc lĩnh vực Giao thông vận tải (cấp xã) do UBND xã, phường, thị trấn. thực hiện.

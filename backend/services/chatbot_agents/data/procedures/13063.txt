@@ -1,3 +1,0 @@
-Thu thập, cập nhật thông tin sinh trắc học về giọng nói vào Cơ sở dữ liệu về căn cước (thực hiện tại cấp tỉnh)
-
-- 13063: Đây là thủ tục Thu thập, cập nhật thông tin sinh trắc học về giọng nói vào Cơ sở dữ liệu về căn cước (thực hiện tại cấp tỉnh) thuộc lĩnh vực Cấp, quản lý căn cước công dân do Công an tỉnh thực hiện.

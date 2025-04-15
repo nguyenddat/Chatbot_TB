@@ -4,9 +4,9 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database.base import engine
-from models.base import Base
-from api import (
+from backend.database.base import engine
+from backend.models.base import Base
+from backend.api import (
     chatbot
 )
 
@@ -26,5 +26,5 @@ def get_application() -> FastAPI:
 
 
 app = get_application()
-if __name__ == '__main__':
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload = True)
+# if __name__ == '__main__':
+#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload = True)

@@ -1,5 +1,5 @@
-from services.chatbot_agents.agents.procedure_selector import procedure_selector
-from services.chatbot_agents.agents.welcome_agent import welcome_agent
+from backend.services.chatbot_agents.agents.procedure_selector import procedure_selector
+from backend.services.chatbot_agents.agents.welcome_agent import welcome_agent
 
 
 agents = {

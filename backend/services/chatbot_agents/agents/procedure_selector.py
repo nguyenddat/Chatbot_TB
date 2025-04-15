@@ -1,7 +1,7 @@
-from services.chatbot_agents.llm_clients.prompts import procedure_selector
-from services.chatbot_agents.llm_clients.clients import get_chat_completion
-from services.chatbot_agents.retrievers.procedure_retriever import retriever
-from services.chatbot_agents.helpers import procedures
+from backend.services.chatbot_agents.llm_clients.prompts import procedure_selector
+from backend.services.chatbot_agents.llm_clients.clients import get_chat_completion
+from backend.services.chatbot_agents.retrievers.procedure_retriever import retriever
+from backend.services.chatbot_agents.helpers import procedures
 
 class ProcedureAgent:
     def __init__(self):
@@ -17,10 +17,9 @@ class ProcedureAgent:
             config = {"k": 10}
         )
         docs = "\n".join([doc.page_content for doc in docs])
-        print(docs)
 
         # Invoke llm
-        response = get_chat_completion(
+        response, tokens = get_chat_completion(
             task = "procedure",
             params = {
                 "procedure_descriptions": docs,
@@ -30,7 +29,7 @@ class ProcedureAgent:
         )
 
         if response["function_id"] == "":
-            return {"response": response["response"], "recommendations": response["recommendations"]}
+            return {"response": response["response"], "recommendations": response["recommendations"]}, tokens
         
         thu_tuc_id = response["function_id"]
         thu_tuc_params = response["function_params"]
@@ -39,7 +38,7 @@ class ProcedureAgent:
             "response": procedures.to_string(thu_tuc_duoc_chon),
             "recommendations": response["recommendations"]
         }
-        return response
+        return response, tokens
 
 procedure_selector = ProcedureAgent()
         

@@ -1,0 +1,64 @@
+-- database: /home/ubuntu/Desktop/Chatbot_TB/chatbot.db
+-- Use the ▷ button in the top right corner to run the entire file.
+-- count unique values in a column ma_thu_tuc
+SELECT
+    COUNT(DISTINCT ma_thu_tuc)
+FROM
+    thu_tuc;
+
+SELECT
+    COUNT(DISTINCT ten_thu_tuc)
+FROM
+    thu_tuc;
+
+-- select all values in the column ten_thu_tuc is duplicated
+SELECT
+    ten_thu_tuc,
+    COUNT(*)
+FROM
+    thu_tuc
+GROUP BY
+    ten_thu_tuc
+HAVING
+    COUNT(*) > 1;
+
+-- select all values in the column ma_thu_tuc is duplicated
+SELECT
+    ma_thu_tuc,
+    ten_thu_tuc,
+    COUNT(*)
+FROM
+    thu_tuc
+GROUP BY
+    ma_thu_tuc
+HAVING
+    COUNT(*) > 1;
+
+-- remove duplicates from the table thu_tuc by ten_thu_tuc
+DELETE FROM thu_tuc
+WHERE
+    rowid NOT IN (
+        SELECT
+            MIN(rowid)
+        FROM
+            thu_tuc
+        GROUP BY
+            ten_thu_tuc
+    );
+
+-- remove duplicates from the table thu_tuc by ma_thu_tuc
+-- DELETE FROM thu_tuc
+-- WHERE rowid NOT IN (
+--     SELECT MIN(rowid)
+--     FROM thu_tuc
+--     GROUP BY ma_thu_tuc
+-- );
+SELECT
+    count(*)
+FROM
+    thu_tuc;
+
+SELECT
+    *
+FROM
+    thu_tuc;

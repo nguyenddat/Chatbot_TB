@@ -5,8 +5,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
-from services.chatbot_agents.helpers.data_loader import data_loader
-from services.chatbot_agents.llm_clients.clients import embeddings
+from backend.services.chatbot_agents.helpers.data_loader import data_loader
+from backend.services.chatbot_agents.llm_clients.clients import embeddings
 
 data_path = os.path.join(os.getcwd(), "backend", "services", "chatbot_agents", "data", "vector_store")
 

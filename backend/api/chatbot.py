@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 
-from database.base import get_db
-from schemas import chatbot
-from services.chatbot_agents import function_calling
-from services.chatbot_agents.helpers import chat_history
+from backend.database.base import get_db
+from backend.schemas import chatbot
+from backend.services.chatbot_agents import function_calling
+from backend.services.chatbot_agents.helpers import chat_history
 
 router = APIRouter()
 

@@ -4,7 +4,7 @@ from tqdm import tqdm
 from langchain_community.document_loaders.text import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from services.chatbot_agents.helpers.procedures import procedures
+from backend.services.chatbot_agents.helpers.procedures import procedures
 
 data_path = os.path.join(os.getcwd(), "backend", "services", "chatbot_agents", "data", "procedures")
 

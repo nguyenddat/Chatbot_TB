@@ -1,3 +1,0 @@
-Hỗ trợ khám chữa bệnh, trợ cấp tai nạn cho lực lượng xung kích phòng chống thiên tai cấp xã trong trường hợp chưa tham gia bảo hiểm y tế, bảo hiểm xã hội
-
-- 12308: Đây là thủ tục Hỗ trợ khám chữa bệnh, trợ cấp tai nạn cho lực lượng xung kích phòng chống thiên tai cấp xã trong trường hợp chưa tham gia bảo hiểm y tế, bảo hiểm xã hội thuộc lĩnh vực Nông nghiệp (cấp xã) do Uỷ ban Nhân dân cấp xã, phường, thị trấn thực hiện.

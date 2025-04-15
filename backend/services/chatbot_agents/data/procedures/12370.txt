@@ -1,3 +1,0 @@
-Giải quyết di chuyển đối với người đang hưởng lương hưu, trợ cấp BHXH hàng tháng và người chờ hưởng lương hưu, trợ cấp hàng tháng từ tỉnh này đến tỉnh khác
-
-- 12370: Đây là thủ tục Giải quyết di chuyển đối với người đang hưởng lương hưu, trợ cấp BHXH hàng tháng và người chờ hưởng lương hưu, trợ cấp hàng tháng từ tỉnh này đến tỉnh khác thuộc lĩnh vực Bảo hiểm xã hội do Bảo hiểm xã hội cấp huyện, Bảo hiểm xã hội cấp Tỉnh thực hiện.

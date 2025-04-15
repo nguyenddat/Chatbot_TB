@@ -1,7 +1,7 @@
 from langchain.schema import HumanMessage, AIMessage
 from typing import List, Dict
 
-from services.chatbot_agents.llm_clients.clients import get_chat_completion
+from backend.services.chatbot_agents.llm_clients.clients import get_chat_completion
 
 
 class ChatHistoryManager:
@@ -26,13 +26,15 @@ class ChatHistoryManager:
 
     def summarize_history(self):
         chat_history = self.to_string()
-        response = get_chat_completion(
+        response, tokens = get_chat_completion(
             task="chat_history", params={"question": chat_history}
         )
 
         self.reset()
         self.chat_history.append(HumanMessage(response["question"]))
         self.chat_history.append(AIMessage(response["response"]))
+
+        print(f"Chat history: {tokens} tokens")
 
     def _format_chat_history(self, chat_history: List[Dict[str, str]]) -> List:
         converted_chat_history = []

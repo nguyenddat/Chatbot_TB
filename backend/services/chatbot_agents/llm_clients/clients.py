@@ -1,18 +1,17 @@
-import os
-
+import tiktoken
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 
-from services.chatbot_agents.llm_clients.parsers import (
+from backend.services.chatbot_agents.llm_clients.parsers import (
     function_calling_parser,
     chat_history_response_parser,
     welcome_parser,
     procedure_parser
 )
 
-from services.chatbot_agents.llm_clients.prompts import (
+from backend.services.chatbot_agents.llm_clients.prompts import (
     agent_selector,
     chat_history,
     procedure_selector,
@@ -36,9 +35,12 @@ def get_chat_completion(task: str, params: dict):
     prompt, parser = get_prompt_template(task=task)
 
     chain = prompt | llm | parser
-
     response = chain.invoke(params).dict()
-    return response
+    # ------------ Tính số tokens-----------------
+    formatted_prompt = prompt.format(**params)
+    tokens = count_tokens(formatted_prompt)
+    
+    return response, tokens
 
 
 def get_prompt_template(task: str):
@@ -66,3 +68,9 @@ def get_prompt_template(task: str):
     ).partial(format_instructions=parser.get_format_instructions())
 
     return prompt_template, parser
+
+
+
+def count_tokens(text, model="gpt-3.5-turbo"):
+    encoding = tiktoken.encoding_for_model(model)
+    return len(encoding.encode(text))
