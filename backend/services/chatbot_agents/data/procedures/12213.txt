@@ -1,0 +1,3 @@
+Cấp giấy chứng nhận xuất xứ (hoặc Phiếu kiểm soát thu hoạch) cho lô nguyên liệu nhuyễn thể hai mảnh vỏ
+
+- 12213: Đây là thủ tục Cấp giấy chứng nhận xuất xứ (hoặc Phiếu kiểm soát thu hoạch) cho lô nguyên liệu nhuyễn thể hai mảnh vỏ thuộc lĩnh vực Quản lý chất lượng Nông lâm sản và Thủy sản do Chi cục Quản lý Chất lượng Nông lâm sản và Thủy sản thực hiện.

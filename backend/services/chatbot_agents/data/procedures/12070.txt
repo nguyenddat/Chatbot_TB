@@ -1,0 +1,3 @@
+Cấp lại giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký chi nhánh, văn phòng đại diện, địa điểm kinh doanh của hợp tác xã (trong trường hợp bị mất hoặc bị hư hỏng)
+
+- 12070: Đây là thủ tục Cấp lại giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký chi nhánh, văn phòng đại diện, địa điểm kinh doanh của hợp tác xã (trong trường hợp bị mất hoặc bị hư hỏng) thuộc lĩnh vực Tài chính Kế toán do Phòng Tài chính - Kế hoạch thuộc UBND cấp huyện, Ủy ban nhân dân huyện, thành phố - Tỉnh Thái Bình thực hiện.

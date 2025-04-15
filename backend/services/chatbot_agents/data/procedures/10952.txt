@@ -1,0 +1,3 @@
+Xóa Giấy chứng nhận đăng ký phương tiện
+
+- 10952: Đây là thủ tục Xóa Giấy chứng nhận đăng ký phương tiện thuộc lĩnh vực Kinh tế Hạ tầng do UBND cấp xã thực hiện.

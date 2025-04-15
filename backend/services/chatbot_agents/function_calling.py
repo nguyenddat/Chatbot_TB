@@ -1,21 +1,14 @@
 from typing import *
 
-from backend.services.chatbot_agents.agents.agent import agents, agent_descriptions
-from backend.services.chatbot_agents.core.models import get_chat_completion
+from services.chatbot_agents.agents.agents import agents, agent_descriptions
+from services.chatbot_agents.agents.agent_selector import agent_selector
+
 
 def function_calling(question: str, chat_history: Any, db: Any = None):
-    response = get_chat_completion(
-        task = "function_calling", 
-        params = {
-            "question": question,
-            "agent_descriptions": agent_descriptions,
-            "chat_history": chat_history
-        }
-    )
+    """ User query --> Agent selector"""
+    agent_selected_id = agent_selector.get_response(question, chat_history)["agent_id"]
+    agent_selected = agents[agent_selected_id]
 
-    agent_id = response["agent_id"]
-    if agent_id not in agents.keys():
-        raise ValueError("Agent không tồn tại")
-    
-    agent = agents[agent_id]
-    return agent
+    """ User query --> Agent selected"""
+    response = agent_selected.get_response(question, chat_history)
+    return response

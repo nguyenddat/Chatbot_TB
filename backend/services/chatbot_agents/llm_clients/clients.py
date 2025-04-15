@@ -2,16 +2,17 @@ import os
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 
-from backend.services.chatbot_agents.llm_clients.parsers import (
+from services.chatbot_agents.llm_clients.parsers import (
     function_calling_parser,
     chat_history_response_parser,
     welcome_parser,
     procedure_parser
 )
 
-from backend.services.chatbot_agents.llm_clients.prompts import (
+from services.chatbot_agents.llm_clients.prompts import (
     agent_selector,
     chat_history,
     procedure_selector,
@@ -20,8 +21,11 @@ from backend.services.chatbot_agents.llm_clients.prompts import (
 
 load_dotenv()
 
-llm = ChatOpenAI(
-    openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-4o", temperature=0
+llm = ChatOpenAI(model_name="gpt-4o", temperature=0)
+
+embeddings = OpenAIEmbeddings(
+    model="text-embedding-3-small",
+    dimensions = 1024
 )
 
 
@@ -34,12 +38,11 @@ def get_chat_completion(task: str, params: dict):
     chain = prompt | llm | parser
 
     response = chain.invoke(params).dict()
-    print(response)
     return response
 
 
 def get_prompt_template(task: str):
-    if task == "function_calling":
+    if task == "agent_selector":
         parser = function_calling_parser
         prompt_template = agent_selector.agent_selector_prompt
     

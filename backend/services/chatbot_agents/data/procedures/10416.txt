@@ -1,0 +1,3 @@
+Xác định trường hợp được bồi thường do xảy ra tai biến trong tiêm chủng
+
+- 10416: Đây là thủ tục Xác định trường hợp được bồi thường do xảy ra tai biến trong tiêm chủng thuộc lĩnh vực Y tế dự phòng do Sở Y tế thực hiện.

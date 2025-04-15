@@ -1,0 +1,3 @@
+Chứng thực chữ ký trong các giấy tờ, văn bản (áp dụng cho cả trường hợp chứng thực điểm chỉ và trường hợp người yêu cầu chứng thực không ký, không điểm chỉ được)
+
+- 10018: Đây là thủ tục Chứng thực chữ ký trong các giấy tờ, văn bản (áp dụng cho cả trường hợp chứng thực điểm chỉ và trường hợp người yêu cầu chứng thực không ký, không điểm chỉ được) thuộc lĩnh vực Tư pháp (cấp xã) do Uỷ ban nhân dân cấp xã/phường thực hiện.

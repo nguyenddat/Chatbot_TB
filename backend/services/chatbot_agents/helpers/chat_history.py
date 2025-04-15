@@ -1,7 +1,7 @@
 from langchain.schema import HumanMessage, AIMessage
 from typing import List, Dict
 
-from backend.services.chatbot_agents.core.models import get_chat_completion
+from services.chatbot_agents.llm_clients.clients import get_chat_completion
 
 
 class ChatHistoryManager:

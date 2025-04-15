@@ -1,0 +1,3 @@
+Cho phép tổ chức hoạt động khám bệnh, chữa bệnh nhân đạo theo đợt, khám bệnh, chữa bệnh lưu động thuộc trường hợp quy định tại khoản 1 Điều 79 của Luật Khám bệnh, chữa bệnh hoặc cá nhân khám bệnh, chữa bệnh nhân đạo
+
+- 12783: Đây là thủ tục Cho phép tổ chức hoạt động khám bệnh, chữa bệnh nhân đạo theo đợt, khám bệnh, chữa bệnh lưu động thuộc trường hợp quy định tại khoản 1 Điều 79 của Luật Khám bệnh, chữa bệnh hoặc cá nhân khám bệnh, chữa bệnh nhân đạo thuộc lĩnh vực Khám chữa bệnh do Cục Quản lý Khám chữa bệnh - Bộ Y tế, Cục Quản lý Y, Dược cổ truyền - Bộ Y tế, Bộ Công an, Bộ Quốc phòng thực hiện.

@@ -1,0 +1,3 @@
+Thông báo thay đổi nội dung đăng ký thuế (trừ thay đổi phương pháp tính thuế)
+
+- 10582: Đây là thủ tục Thông báo thay đổi nội dung đăng ký thuế (trừ thay đổi phương pháp tính thuế) thuộc lĩnh vực Thành lập và hoạt động của doanh nghiệp do Sở Kế hoạch và Đầu tư tỉnh Thái Bình thực hiện.

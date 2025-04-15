@@ -1,0 +1,3 @@
+Dừng thực hiện thủ tục đăng ký hợp tác xã, liên hiệp hợp tác xã
+
+- 13424: Đây là thủ tục Dừng thực hiện thủ tục đăng ký hợp tác xã, liên hiệp hợp tác xã thuộc lĩnh vực Tài chính Kế toán do Phòng Tài chính - Kế hoạch thực hiện.

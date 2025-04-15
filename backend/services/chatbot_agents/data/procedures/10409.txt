@@ -1,0 +1,3 @@
+Phê duyệt bổ sung danh mục kỹ thuật của các cơ sở khám bệnh, chữa bệnh thuộc thẩm quyền quản lý của Sở Y tế
+
+- 10409: Đây là thủ tục Phê duyệt bổ sung danh mục kỹ thuật của các cơ sở khám bệnh, chữa bệnh thuộc thẩm quyền quản lý của Sở Y tế thuộc lĩnh vực Khám chữa bệnh do Sở Y tế thực hiện.

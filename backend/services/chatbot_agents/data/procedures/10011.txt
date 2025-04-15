@@ -1,0 +1,3 @@
+Đăng ký lại phương tiện thủy nội địa. (Loại phương tiện không có động cơ cóa trọng tải toàn phần từ 01 đến 15 tấn hoặc có sức chở từ 05 người đến 12 người, phương tiện có động cơ có công suất máy chính dưới 05 sức ngựa hoặc sức chở dưới 05 người của tổ chức, cá nhân có trụ sở hoặc nơi đăng ký hộ khẩu thường trú tại địa bàn quản lý)
+
+- 10011: Đây là thủ tục Đăng ký lại phương tiện thủy nội địa. (Loại phương tiện không có động cơ cóa trọng tải toàn phần từ 01 đến 15 tấn hoặc có sức chở từ 05 người đến 12 người, phương tiện có động cơ có công suất máy chính dưới 05 sức ngựa hoặc sức chở dưới 05 người của tổ chức, cá nhân có trụ sở hoặc nơi đăng ký hộ khẩu thường trú tại địa bàn quản lý) thuộc lĩnh vực Giao thông vận tải (cấp xã) do UBND xã, phường, thị trấn. thực hiện.

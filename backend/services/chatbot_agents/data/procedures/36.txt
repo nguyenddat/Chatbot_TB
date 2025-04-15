@@ -1,0 +1,3 @@
+Khai thác thông tin người gốc Việt Nam chưa xác định được quốc tịch trong Cơ sở dữ liệu quốc gia về dân cư (thực hiện tại cấp tỉnh)
+
+- 36: Đây là thủ tục Khai thác thông tin người gốc Việt Nam chưa xác định được quốc tịch trong Cơ sở dữ liệu quốc gia về dân cư (thực hiện tại cấp tỉnh) thuộc lĩnh vực Cấp, quản lý căn cước công dân do Công an tỉnh thực hiện.

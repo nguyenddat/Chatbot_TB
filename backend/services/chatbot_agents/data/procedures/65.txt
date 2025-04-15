@@ -1,0 +1,3 @@
+Tích hợp, cập nhật, điều chỉnh thông tin trên thẻ căn cước (thực hiện tại cấp tỉnh)
+
+- 65: Đây là thủ tục Tích hợp, cập nhật, điều chỉnh thông tin trên thẻ căn cước (thực hiện tại cấp tỉnh) thuộc lĩnh vực Cấp, quản lý căn cước công dân do Công an tỉnh thực hiện.

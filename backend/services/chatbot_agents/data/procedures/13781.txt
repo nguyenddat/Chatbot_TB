@@ -1,0 +1,3 @@
+Sửa đổi, bổ sung thông tin cá nhân trong hồ sơ người có công
+
+- 13781: Đây là thủ tục Sửa đổi, bổ sung thông tin cá nhân trong hồ sơ người có công thuộc lĩnh vực Người có công do Sở Nội vụ thực hiện.

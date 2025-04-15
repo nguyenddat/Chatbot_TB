@@ -1,0 +1,8 @@
+Kiểm tra công tơ, thiết bị đo đếm khác
+
+- 10477: Đây là thủ tục Kiểm tra công tơ, thiết bị đo đếm khác thuộc lĩnh vực Dịch vụ trong quá trình thực hiện hợp đồng mua bán điện do - Cơ quan có thẩm quyền quyết định: Điện lực
+-  Cơ quan trực tiếp thực hiện TTHC:
++ Trường hợp kiểm tra công tơ, thiết bị đo đếm: Điện lực
++ Trường hợp kiểm định công tơ, thiết bị đo đếm:
+Tổ chức kiểm định độc lập
+- Cơ quan phối hợp (nếu có): thực hiện.

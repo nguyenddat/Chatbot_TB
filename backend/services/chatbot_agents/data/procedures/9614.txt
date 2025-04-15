@@ -1,0 +1,3 @@
+Cho phép họp báo (nước ngoài)
+
+- 9614: Đây là thủ tục Cho phép họp báo (nước ngoài) thuộc lĩnh vực Báo chí do Sở Thông tin và Truyền thông thực hiện.

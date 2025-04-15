@@ -1,0 +1,3 @@
+Cấp bản sao có chứng thực từ bản chính hợp đồng, giao dịch đã được chứng thực
+
+- 9464: Đây là thủ tục Cấp bản sao có chứng thực từ bản chính hợp đồng, giao dịch đã được chứng thực thuộc lĩnh vực Tư pháp (cấp xã) do Uỷ ban nhân dân cấp xã/phường thực hiện.

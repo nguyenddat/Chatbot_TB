@@ -1,0 +1,3 @@
+Điều chỉnh tiền cấp quyền khai thác tài nguyên nước (cấp tỉnh)
+
+- 12116: Đây là thủ tục Điều chỉnh tiền cấp quyền khai thác tài nguyên nước (cấp tỉnh) thuộc lĩnh vực Tài nguyên nước do Sở Tài nguyên và Môi trường tỉnh Thái Bình thực hiện.

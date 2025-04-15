@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer
 
-from backend.models.base import BareBaseModel
+from models.base import BareBaseModel
 
 class ThuTuc(BareBaseModel):
     __tablename__ = "thu_tuc"

@@ -1,0 +1,3 @@
+Chứng thực việc sửa đổi, bổ sung, hủy bỏ hợp đồng, giao dịch
+
+- 9448: Đây là thủ tục Chứng thực việc sửa đổi, bổ sung, hủy bỏ hợp đồng, giao dịch thuộc lĩnh vực Tư pháp (cấp xã) do UBND xã/phường thực hiện.

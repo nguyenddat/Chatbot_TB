@@ -1,0 +1,3 @@
+Cấp số tiếp nhận Phiếu công bố sản phẩm mỹ phẩm sản xuất trong nước
+
+- 10505: Đây là thủ tục Cấp số tiếp nhận Phiếu công bố sản phẩm mỹ phẩm sản xuất trong nước thuộc lĩnh vực Mỹ phẩm do Sở Y tế thực hiện.

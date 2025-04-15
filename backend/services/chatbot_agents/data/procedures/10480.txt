@@ -1,0 +1,4 @@
+Thay đổi hình thức thanh toán tiền điện
+
+- 10480: Đây là thủ tục Thay đổi hình thức thanh toán tiền điện thuộc lĩnh vực Dịch vụ trong quá trình thực hiện hợp đồng mua bán điện do - Cơ quan có thẩm quyền quyết định: Điện lực
+- Cơ quan phối hợp: thực hiện.

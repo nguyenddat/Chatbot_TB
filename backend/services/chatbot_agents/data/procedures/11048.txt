@@ -1,0 +1,3 @@
+Đăng ký lại phương tiện trong trường hợp phương tiện thay đổi tên, tính năng kỹ thuật
+
+- 11048: Đây là thủ tục Đăng ký lại phương tiện trong trường hợp phương tiện thay đổi tên, tính năng kỹ thuật thuộc lĩnh vực Kinh tế Hạ tầng do Sở Giao thông vận tải, Ủy ban nhân dân cấp xã, UBND cấp huyện thực hiện.
