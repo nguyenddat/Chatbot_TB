@@ -10,7 +10,7 @@ class WelcomeAgent:
     
 
     def get_response(self, question, chat_history):
-        response = get_chat_completion(
+        response, tokens = get_chat_completion(
             task = "welcome",
             params = {
                 "procedure_descriptions": get_random_thu_tuc(),
@@ -19,7 +19,7 @@ class WelcomeAgent:
             }
         )
 
-        return response
+        return response, tokens
 
 welcome_agent = WelcomeAgent()
 

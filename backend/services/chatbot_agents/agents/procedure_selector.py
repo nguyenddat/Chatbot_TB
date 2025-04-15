@@ -20,7 +20,7 @@ class ProcedureAgent:
         print(docs)
 
         # Invoke llm
-        response = get_chat_completion(
+        response, tokens = get_chat_completion(
             task = "procedure",
             params = {
                 "procedure_descriptions": docs,
@@ -39,7 +39,7 @@ class ProcedureAgent:
             "response": procedures.to_string(thu_tuc_duoc_chon),
             "recommendations": response["recommendations"]
         }
-        return response
+        return response, tokens
 
 procedure_selector = ProcedureAgent()
         
