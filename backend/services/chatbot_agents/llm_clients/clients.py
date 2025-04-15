@@ -38,7 +38,7 @@ def get_chat_completion(task: str, params: dict):
 
     response = chain.invoke(params).dict()
     # --------------tính số token-----------------
-    formatted_prompt = prompt.format(**format)
+    formatted_prompt = prompt.format(**params)
     tokens = count_tokens(formatted_prompt)
 
     return response, tokens

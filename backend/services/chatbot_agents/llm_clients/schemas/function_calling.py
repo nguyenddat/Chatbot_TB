@@ -6,4 +6,5 @@ class FunctionCallingResponse(BaseModel):
     """
     Function calling response schema.
     """
-    agent_id: str = Field(..., description="Tên agent được chọn")
+    procedure: str = Field(..., description="Một thủ tục đang được đề cập đến")
+    procedure_params: List[str] = Field(..., description="Thông tin chi tiết của thủ tục")

@@ -40,6 +40,7 @@ class ChatHistoryManager:
             if message.get("human") is not None:
                 converted_chat_history.append(HumanMessage(content=message["human"]))
             if message.get("ai") is not None:
+                continue
                 converted_chat_history.append(AIMessage(content=message["ai"]))
         return converted_chat_history
 
