@@ -1,0 +1,3 @@
+Xác nhận bảng kê lâm sản (cấp Tỉnh)
+
+- 15348: Đây là thủ tục Xác nhận bảng kê lâm sản (cấp Tỉnh) thuộc lĩnh vực Lâm nghiệp do Chi cục Kiểm lâm thực hiện.

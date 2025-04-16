@@ -1,3 +1,0 @@
-Trả lại khu vực biển (cấp tỉnh)
-
-- 10511: Đây là thủ tục Trả lại khu vực biển (cấp tỉnh) thuộc lĩnh vực Biển, Hải Đảo và Thủy Văn do Sở Tài nguyên và Môi trường tỉnh Thái Bình thực hiện.

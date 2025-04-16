@@ -1,3 +1,0 @@
-Cấp, gia hạn Chứng chỉ hành nghề thú y thuộc thẩm quyền cơ quan quản lý chuyên ngành thú y cấp tỉnh (gồm tiêm phòng, chữa bệnh, phẫu thuật động vật; tư vấn các hoạt động liên quan đến lĩnh vực thú y; khám bệnh, chẩn đoán bệnh, xét nghiệm bệnh động vật; buôn bán thuốc thú y)
-
-- 9323: Đây là thủ tục Cấp, gia hạn Chứng chỉ hành nghề thú y thuộc thẩm quyền cơ quan quản lý chuyên ngành thú y cấp tỉnh (gồm tiêm phòng, chữa bệnh, phẫu thuật động vật; tư vấn các hoạt động liên quan đến lĩnh vực thú y; khám bệnh, chẩn đoán bệnh, xét nghiệm bệnh động vật; buôn bán thuốc thú y) thuộc lĩnh vực Thú y do Chi cục Chăn nuôi và Thú y thực hiện.

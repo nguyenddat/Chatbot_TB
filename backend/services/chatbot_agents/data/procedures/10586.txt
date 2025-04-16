@@ -1,3 +1,0 @@
-Cấp đổi Giấy chứng nhận đăng ký kinh doanh hoặc Giấy chứng nhận đăng ký kinh doanh và đăng ký thuế sang Giấy chứng nhận đăng ký doanh nghiệp nhưng không thay đổi nội dung đăng ký kinh doanh và đăng ký thuế
-
-- 10586: Đây là thủ tục Cấp đổi Giấy chứng nhận đăng ký kinh doanh hoặc Giấy chứng nhận đăng ký kinh doanh và đăng ký thuế sang Giấy chứng nhận đăng ký doanh nghiệp nhưng không thay đổi nội dung đăng ký kinh doanh và đăng ký thuế thuộc lĩnh vực Thành lập và hoạt động của doanh nghiệp do Sở Kế hoạch và Đầu tư tỉnh Thái Bình thực hiện.

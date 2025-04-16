@@ -1,3 +1,0 @@
-Bổ sung tình hình thân nhân trong hồ sơ liệt sĩ.
-
-- 13835: Đây là thủ tục Bổ sung tình hình thân nhân trong hồ sơ liệt sĩ. thuộc lĩnh vực Người có công do Sở Lao động Thương binh và Xã hội tỉnh Thái Bình thực hiện.

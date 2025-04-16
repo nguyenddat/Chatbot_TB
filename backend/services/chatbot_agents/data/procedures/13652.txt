@@ -1,3 +1,0 @@
-Cung cấp thông tin, dữ liệu đất đai.
-
-- 13652: Đây là thủ tục Cung cấp thông tin, dữ liệu đất đai. thuộc lĩnh vực Đất đai do Văn phòng đăng ký đất đai, Chi nhánh Văn phòng đăng ký đất đai, Ủy ban nhân dân cấp xã thực hiện.

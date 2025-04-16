@@ -1,3 +1,0 @@
-Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình đã vận hành (cấp tỉnh)
-
-- 12080: Đây là thủ tục Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình đã vận hành (cấp tỉnh) thuộc lĩnh vực Tài nguyên nước do Sở Tài nguyên và Môi trường thực hiện.

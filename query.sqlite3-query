@@ -62,3 +62,37 @@ SELECT
     *
 FROM
     thu_tuc;
+
+-- select all values in the column ma_thu_tuc is duplicated, display all rows
+SELECT
+    *
+FROM
+    thu_tuc
+WHERE
+    ma_thu_tuc IN (
+        SELECT
+            ma_thu_tuc
+        FROM
+            thu_tuc
+        GROUP BY
+            ma_thu_tuc
+        HAVING
+            COUNT(*) > 1
+    );
+
+-- search ten_thu_tuc contains 'tạm trú'
+SELECT
+    *
+FROM
+    thu_tuc
+WHERE
+    ten_thu_tuc LIKE '%lưu trú%';
+
+SELECT
+    *
+FROM
+    thu_tuc
+WHERE
+    ten_thu_tuc LIKE '%đăng ký khai sinh%';
+
+-- id = 52;

@@ -1,0 +1,3 @@
+Đăng ký lại phương tiện trong trường hợp chủ phương tiện thay đổi trụ sở hoặc nơi đăng ký hộ khẩu thường trú của chủ phương tiện sang đơn vị hành chính cấp tỉnh khác
+
+- 17021: Đây là thủ tục Đăng ký lại phương tiện trong trường hợp chủ phương tiện thay đổi trụ sở hoặc nơi đăng ký hộ khẩu thường trú của chủ phương tiện sang đơn vị hành chính cấp tỉnh khác thuộc lĩnh vực Kinh tế Hạ tầng do Sở Giao thông vận tải, Ủy ban nhân dân cấp xã, UBND cấp huyện thực hiện.

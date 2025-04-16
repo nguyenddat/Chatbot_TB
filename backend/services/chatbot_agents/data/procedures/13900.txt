@@ -1,0 +1,3 @@
+Cấp văn bản xác nhận thông báo hoạt động bưu chính (cấp tỉnh)
+
+- 13900: Đây là thủ tục Cấp văn bản xác nhận thông báo hoạt động bưu chính (cấp tỉnh) thuộc lĩnh vực Bưu chính do Sở Thông tin và Truyền thông thực hiện.

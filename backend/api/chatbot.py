@@ -12,16 +12,16 @@ router = APIRouter()
 def chat_chatbot(data: chatbot.ChatChatbotRequest, db=Depends(get_db)):
     question = data.question
     chat_history_request = data.chat_history
+
+    crop = min(6, len(chat_history_request))
+    chat_history_request = chat_history_request[-crop:]
+
     chat_history_format = chat_history.chat_history_mananger._format_chat_history(
         chat_history_request
     )
 
     response = function_calling.function_calling(
         question=question, chat_history=chat_history_format, db=db
-    )
-
-    chat_history.chat_history_mananger.add_chat_format(
-        chat_history_format=chat_history_format
     )
 
     return {

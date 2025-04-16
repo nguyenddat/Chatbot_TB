@@ -3,43 +3,42 @@ from backend.services.chatbot_agents.llm_clients.clients import get_chat_complet
 from backend.services.chatbot_agents.retrievers.procedure_retriever import retriever
 from backend.services.chatbot_agents.helpers import procedures
 
+
 class ProcedureAgent:
     def __init__(self):
-        self.description = "Đây là agent được chuyên dụng đối với nhiệm vụ hỏi đáp về một thủ tục cụ thể. Nếu người dùng cần hỏi về thủ tục cụ thể nào đó, agent nên được ưu tiên. Nếu người dùng hỏi chung chung như tôi phù hợp với thủ tục nào, không nên sử dụng agent này."
-
         self.propmt = procedure_selector.procedure_selector_prompt
 
-
-    def get_response(self, question, chat_history):
+    def get_response(self, procedure, procedure_params):
         # Get 10 docs relevant
-        docs = retriever.retriever.invoke(
-            question,
-            config = {"k": 10}
-        )
+        docs = retriever.retriever.invoke(procedure, config={"k": 5})
         docs = "\n".join([doc.page_content for doc in docs])
 
         # Invoke llm
         response, tokens = get_chat_completion(
-            task = "procedure",
-            params = {
+            task="procedure",
+            params={
                 "procedure_descriptions": docs,
-                "question": question,
-                "chat_history": chat_history
-            }
+                "question": procedure,
+            },
         )
 
-        if response["function_id"] == "":
-            return {"response": response["response"], "recommendations": response["recommendations"]}, tokens
-        
-        thu_tuc_id = response["function_id"]
-        thu_tuc_params = response["function_params"]
-        thu_tuc_duoc_chon = procedures.get_by_id(id = thu_tuc_id, params = thu_tuc_params)
+        print("context docs", docs)
+
+        print("response get procedure ID", response)
+
+        if response["procedure_id"] == "":
+            return {
+                "response": response["response"],
+                "recommendations": response["recommendations"],
+            }
+
+        thu_tuc_id = response["procedure_id"]
+        thu_tuc_duoc_chon = procedures.get_by_id(id=thu_tuc_id, params=procedure_params)
         response = {
             "response": procedures.to_string(thu_tuc_duoc_chon),
-            "recommendations": response["recommendations"]
+            "recommendations": response["recommendations"],
         }
         return response, tokens
 
-procedure_selector = ProcedureAgent()
-        
 
+procedure_selector = ProcedureAgent()

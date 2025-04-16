@@ -1,0 +1,4 @@
+Cấp lại, đổi, điều chỉnh thông tin trên sổ BHXH, thẻ BHYT
+
+- 15037: Đây là thủ tục Cấp lại, đổi, điều chỉnh thông tin trên sổ BHXH, thẻ BHYT thuộc lĩnh vực Bảo hiểm xã hội do - BHXH tỉnh;
+- BHXH huyện (theo phân cấp). thực hiện.

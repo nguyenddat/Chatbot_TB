@@ -1,3 +1,0 @@
-Đăng ký lại phương tiện trong trường hợp chuyển quyền sở hữu phương tiện nhưng không thay đổi cơ quan đăng ký phương tiện (cấp xã)
-
-- 11612: Đây là thủ tục Đăng ký lại phương tiện trong trường hợp chuyển quyền sở hữu phương tiện nhưng không thay đổi cơ quan đăng ký phương tiện (cấp xã) thuộc lĩnh vực Giao thông vận tải (cấp xã) do UBND cấp xã thực hiện.

@@ -1,3 +1,0 @@
-Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình chưa vận hành cấp tỉnh
-
-- 12115: Đây là thủ tục Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình chưa vận hành cấp tỉnh thuộc lĩnh vực Tài nguyên nước do Sở Tài nguyên và Môi trường thực hiện.

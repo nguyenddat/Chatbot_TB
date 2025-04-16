@@ -1,0 +1,3 @@
+Hiệp thương giá
+
+- 18487: Đây là thủ tục Hiệp thương giá thuộc lĩnh vực Quản lý giá do Cơ quan khác thực hiện.

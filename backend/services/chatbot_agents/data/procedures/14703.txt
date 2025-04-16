@@ -1,0 +1,3 @@
+Cho phép mua thuốc gây nghiện, thuốc hướng thần, thuốc tiền chất thuộc thẩm quyền của Sở Y tế
+
+- 14703: Đây là thủ tục Cho phép mua thuốc gây nghiện, thuốc hướng thần, thuốc tiền chất thuộc thẩm quyền của Sở Y tế thuộc lĩnh vực Dược phẩm do Sở Y tế thực hiện.

@@ -36,10 +36,10 @@ def get_chat_completion(task: str, params: dict):
 
     chain = prompt | llm | parser
     response = chain.invoke(params).dict()
-    # ------------ Tính số tokens-----------------
+    # --------------tính số token-----------------
     formatted_prompt = prompt.format(**params)
     tokens = count_tokens(formatted_prompt)
-    
+
     return response, tokens
 
 
@@ -70,7 +70,6 @@ def get_prompt_template(task: str):
     return prompt_template, parser
 
 
-
-def count_tokens(text, model="gpt-3.5-turbo"):
-    encoding = tiktoken.encoding_for_model(model)
+def count_tokens(text, model="gpt-4o"):
+    encoding = tiktoken.get_encoding("cl100k_base")
     return len(encoding.encode(text))

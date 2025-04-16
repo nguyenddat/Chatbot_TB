@@ -1,3 +1,0 @@
-Kế hoạch tổng thể thực hiện chương trình, dự án sử dụng vốn ODA, vốn vay ưu đãi, vốn đối ứng
-
-- 11967: Đây là thủ tục Kế hoạch tổng thể thực hiện chương trình, dự án sử dụng vốn ODA, vốn vay ưu đãi, vốn đối ứng thuộc lĩnh vực ODA/NGO do Sở Kế hoạch và Đầu tư, Cơ quan chủ quản thực hiện.

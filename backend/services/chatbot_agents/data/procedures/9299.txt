@@ -1,3 +1,0 @@
-Sáp nhập, chia, tách trường trung học phổ thông, trường phổ thông có nhiều cấp học có cấp học cao nhất là trung học phổ thông
-
-- 9299: Đây là thủ tục Sáp nhập, chia, tách trường trung học phổ thông, trường phổ thông có nhiều cấp học có cấp học cao nhất là trung học phổ thông thuộc lĩnh vực Giáo dục trung học do Ủy ban nhân dân cấp Tỉnh, Sở Giáo dục và Đào tạo thực hiện.

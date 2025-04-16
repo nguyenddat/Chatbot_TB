@@ -1,0 +1,3 @@
+Đăng ký thay đổi nội dung đăng ký doanh nghiệp đối với công ty bị tách (đối với công ty trách nhiệm hữu hạn, công ty cổ phần)
+
+- 15540: Đây là thủ tục Đăng ký thay đổi nội dung đăng ký doanh nghiệp đối với công ty bị tách (đối với công ty trách nhiệm hữu hạn, công ty cổ phần) thuộc lĩnh vực Thành lập và hoạt động của doanh nghiệp do Sở Kế hoạch và Đầu tư tỉnh Thái Bình thực hiện.

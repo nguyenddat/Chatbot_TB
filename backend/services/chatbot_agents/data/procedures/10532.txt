@@ -1,3 +1,0 @@
-Công bố mở luồng chuyên dùng nối với luồng quốc gia, luồng chuyên dùng nối với luồng địa phương
-
-- 10532: Đây là thủ tục Công bố mở luồng chuyên dùng nối với luồng quốc gia, luồng chuyên dùng nối với luồng địa phương thuộc lĩnh vực Đường thủy nội địa do Bộ Giao thông vận tải, Cục Đường thủy nội địa Việt Nam, Ủy ban nhân dân cấp Tỉnh, Sở Giao thông vận tải thực hiện.

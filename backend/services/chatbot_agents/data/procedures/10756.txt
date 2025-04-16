@@ -1,3 +1,0 @@
-Xóa đăng ký tàu cá
-
-- 10756: Đây là thủ tục Xóa đăng ký tàu cá thuộc lĩnh vực Thủy sản do Chi cục Thủy sản thực hiện.

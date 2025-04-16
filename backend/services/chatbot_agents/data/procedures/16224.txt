@@ -1,0 +1,3 @@
+Xóa Giấy chứng nhận đăng ký phương tiện
+
+- 16224: Đây là thủ tục Xóa Giấy chứng nhận đăng ký phương tiện thuộc lĩnh vực Giao thông vận tải (cấp xã) do Cục Đường thủy nội địa Việt Nam, Sở Giao thông vận tải, Chi cục đường thủy nội địa thực hiện.

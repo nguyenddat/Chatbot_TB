@@ -1,0 +1,3 @@
+Xoá Giấy đăng ký phương tiện
+
+- 14586: Đây là thủ tục Xoá Giấy đăng ký phương tiện thuộc lĩnh vực Giao thông vận tải (cấp xã) do UBND huyện thực hiện.

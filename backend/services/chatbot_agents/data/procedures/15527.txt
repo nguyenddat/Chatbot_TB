@@ -1,0 +1,3 @@
+Cung cấp thông tin về quy hoạch xây dựng thuộc thẩm quyền của UBND cấp tỉnh
+
+- 15527: Đây là thủ tục Cung cấp thông tin về quy hoạch xây dựng thuộc thẩm quyền của UBND cấp tỉnh thuộc lĩnh vực Quy hoạch kiến trúc do Cơ quan quản lý quy hoạch tỉnh thực hiện.

@@ -1,0 +1,3 @@
+Thông báo hoạt động bán lẻ thuốc lưu động
+
+- 14707: Đây là thủ tục Thông báo hoạt động bán lẻ thuốc lưu động thuộc lĩnh vực Dược phẩm do Sở Y tế thực hiện.

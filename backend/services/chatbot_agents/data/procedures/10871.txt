@@ -1,9 +1,0 @@
-Đăng ký khai sinh có yếu tố nước ngoài
-
-- 10871: Đây là thủ tục Đăng ký khai sinh có yếu tố nước ngoài thuộc lĩnh vực Tư pháp do +
-Ủy ban nhân dân cấp huyện nơi cư trú của người cha hoặc người mẹ thực hiện đăng ký khai sinh đối với trẻ em sinh ra ở Việt Nam;
-+
-Ủy ban nhân dân cấp huyện nơi cư trú của trẻ em thực hiện đăng ký khai sinh đối với trẻ em sinh ra ở nước ngoài, chưa được đăng ký khai sinh về cư trú tại Việt Nam
-.
-- Cơ quan trực tiếp thực hiện thủ tục hành chính: Phòng Tư pháp.
-- Cơ quan phối hợp: Không thực hiện.

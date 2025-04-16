@@ -1,0 +1,4 @@
+Cấp điện trở lại khi Khách hàng đã tạm ngừng sử dụng điện
+
+- 15078: Đây là thủ tục Cấp điện trở lại khi Khách hàng đã tạm ngừng sử dụng điện thuộc lĩnh vực Dịch vụ trong quá trình thực hiện hợp đồng mua bán điện do - Cơ quan có thẩm quyền quyết định: Điện lực
+- Cơ quan phối hợp: thực hiện.

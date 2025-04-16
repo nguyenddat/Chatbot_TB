@@ -1,5 +1,0 @@
-Cấp điện mới từ lưới điện trung áp( cấp điện áp 10kV,22kV,35kV)
-
-- 10463: Đây là thủ tục Cấp điện mới từ lưới điện trung áp( cấp điện áp 10kV,22kV,35kV) thuộc lĩnh vực Dịch vụ cung cấp điện mới do - Cơ quan có thẩm quyền quyết định: Điện lực
--  Cơ quan trực tiếp thực hiện TTHC: Điện lực
-- Cơ quan phối hợp: Sở Công Thương, Sở Giao thông vận tải, Sở NN&amp;PTNT, UBND huyện/thành phố. thực hiện.

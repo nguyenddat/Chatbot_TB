@@ -1,0 +1,3 @@
+Trả lại Giấy phép thăm dò khoáng sản hoặc trả lại một phần diện tích khu vực thăm dò khoáng sản (cấp tỉnh)
+
+- 15055: Đây là thủ tục Trả lại Giấy phép thăm dò khoáng sản hoặc trả lại một phần diện tích khu vực thăm dò khoáng sản (cấp tỉnh) thuộc lĩnh vực Tài nguyên khoáng sản do Sở Tài nguyên và Môi trường tỉnh Thái Bình thực hiện.

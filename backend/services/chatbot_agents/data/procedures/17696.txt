@@ -1,0 +1,3 @@
+Khai thác và sử dụng cơ sở dữ liệu tài nguyên, môi trường biển và hải đảo thông qua phiếu yêu cầu hoặc văn bản yêu cầu (cấp tỉnh)
+
+- 17696: Đây là thủ tục Khai thác và sử dụng cơ sở dữ liệu tài nguyên, môi trường biển và hải đảo thông qua phiếu yêu cầu hoặc văn bản yêu cầu (cấp tỉnh) thuộc lĩnh vực Biển, Hải Đảo và Thủy Văn do Sở Tài nguyên và Môi trường thực hiện.

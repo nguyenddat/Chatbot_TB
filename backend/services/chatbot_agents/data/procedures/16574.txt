@@ -1,0 +1,3 @@
+Kế hoạch thực hiện chương trình, dự án sử dụng vốn ODA, vốn vay ưu đãi, vốn đối ứng hằng năm
+
+- 16574: Đây là thủ tục Kế hoạch thực hiện chương trình, dự án sử dụng vốn ODA, vốn vay ưu đãi, vốn đối ứng hằng năm thuộc lĩnh vực ODA/NGO do Sở Kế hoạch và Đầu tư, Cơ quan chủ quản thực hiện.

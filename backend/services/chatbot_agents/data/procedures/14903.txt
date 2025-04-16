@@ -1,0 +1,3 @@
+Đăng ký lại phương tiện trong trường hợp chuyển từ cơ quan đăng ký khác sang cơ quan đăng ký phương tiện thủy nội địa
+
+- 14903: Đây là thủ tục Đăng ký lại phương tiện trong trường hợp chuyển từ cơ quan đăng ký khác sang cơ quan đăng ký phương tiện thủy nội địa thuộc lĩnh vực Đường thủy nội địa do Sở Giao thông vận tải, Ủy ban nhân dân cấp xã, UBND cấp huyện thực hiện.

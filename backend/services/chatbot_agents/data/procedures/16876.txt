@@ -1,0 +1,3 @@
+Sửa đổi, bổ sung nội dung quyết định công nhận và giao quyền quản lý cho tổ chức cộng đồng (thuộc địa bàn quản lý)
+
+- 16876: Đây là thủ tục Sửa đổi, bổ sung nội dung quyết định công nhận và giao quyền quản lý cho tổ chức cộng đồng (thuộc địa bàn quản lý) thuộc lĩnh vực Nông nghiệp do Ủy ban nhân dân cấp Huyện thực hiện.

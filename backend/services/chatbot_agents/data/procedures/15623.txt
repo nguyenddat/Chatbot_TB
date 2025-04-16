@@ -1,0 +1,3 @@
+Thông báo luồng đường thủy nội địa chuyên dùng
+
+- 15623: Đây là thủ tục Thông báo luồng đường thủy nội địa chuyên dùng thuộc lĩnh vực Đường thủy nội địa do Sở Giao thông vận tải thực hiện.

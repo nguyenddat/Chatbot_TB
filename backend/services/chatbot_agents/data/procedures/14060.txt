@@ -1,0 +1,3 @@
+Sửa lỗi sai sót trong hợp đồng, giao dịch
+
+- 14060: Đây là thủ tục Sửa lỗi sai sót trong hợp đồng, giao dịch thuộc lĩnh vực Tư pháp (cấp xã) do Uỷ ban nhân dân cấp xã/phường thực hiện.

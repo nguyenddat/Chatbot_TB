@@ -1,0 +1,3 @@
+Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình cấp cho sinh hoạt đã đi vào vận hành và được cấp giấy phép khai thác tài nguyên nước nhưng chưa được phê duyệt tiền cấp quyền
+
+- 17672: Đây là thủ tục Tính tiền cấp quyền khai thác tài nguyên nước đối với công trình cấp cho sinh hoạt đã đi vào vận hành và được cấp giấy phép khai thác tài nguyên nước nhưng chưa được phê duyệt tiền cấp quyền thuộc lĩnh vực Tài nguyên nước do Sở Tài nguyên và Môi trường thực hiện.

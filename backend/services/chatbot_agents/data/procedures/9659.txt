@@ -1,3 +1,0 @@
-Hợp nhất doanh nghiệp (đối với công ty trách nhiệm hữu hạn, công ty cổ phần và công ty hợp danh)
-
-- 9659: Đây là thủ tục Hợp nhất doanh nghiệp (đối với công ty trách nhiệm hữu hạn, công ty cổ phần và công ty hợp danh) thuộc lĩnh vực Thành lập và hoạt động của doanh nghiệp do Sở Kế hoạch và Đầu tư tỉnh Thái Bình thực hiện.

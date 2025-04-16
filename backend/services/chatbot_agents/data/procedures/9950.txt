@@ -1,3 +1,0 @@
-Cấp lại Giấy chứng nhận đăng ký trong trường hợp chuyển từ cơ quan đăng ký khác sang cơ quan đăng ký phương tiện thủy nội địa.
-
-- 9950: Đây là thủ tục Cấp lại Giấy chứng nhận đăng ký trong trường hợp chuyển từ cơ quan đăng ký khác sang cơ quan đăng ký phương tiện thủy nội địa. thuộc lĩnh vực Giao thông vận tải (cấp xã) do UBND xã, phường, thị trấn. thực hiện.
